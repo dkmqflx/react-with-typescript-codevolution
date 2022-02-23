@@ -1,6 +1,6 @@
 type GreetProps = {
   name: string;
-  messageCount: number;
+  messageCount?: number;
   isLoggedIn: boolean;
 };
 
@@ -9,10 +9,11 @@ type GreetProps = {
 // props:string이 앙니라, 위처럼 타입을 정의해주어야 한다.
 
 export function Greet(props: GreetProps) {
+  const { messageCount = 0 } = props;
   return (
     <div>
       {props.isLoggedIn
-        ? ` This ${props.name} is Greet ${props.messageCount}
+        ? ` This ${props.name} is Greet ${messageCount}
       state is`
         : 'not loggged'}
     </div>
