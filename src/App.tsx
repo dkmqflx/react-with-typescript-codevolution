@@ -1,12 +1,11 @@
 import './App.css';
-import DomRef from './ref/DomRef';
-import { MutableRef } from './ref/MutableRef';
+import { Private } from './components/auth/Private';
+import { Profile } from './components/auth/Profile';
 
 function App() {
   return (
     <div className="App">
-      <DomRef></DomRef>
-      <MutableRef></MutableRef>
+      <Private isLoggedIn={true} component={Profile}></Private>
     </div>
   );
 }
