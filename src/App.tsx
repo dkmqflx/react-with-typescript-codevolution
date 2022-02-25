@@ -1,19 +1,15 @@
 import './App.css';
-import List from './components/generics/List';
+import RandomNumber from './components/restriction/RandomNumber';
 
 function App() {
   return (
     <div className="App">
-      <List items={['1', '2', '3']} onClick={(item) => console.log(item)}></List>
-      <List items={[1, 2, 3]} onClick={(item) => console.log(item)}></List>
-      <List
-        items={[
-          { id: 1, first: '1' },
-          { id: 2, first: '2' },
-          { id: 3, first: '3' },
-        ]}
-        onClick={(item) => console.log(item)}
-      ></List>
+      <RandomNumber value={10} isPositive></RandomNumber>
+      {/* 자동으로 isPositive={true} 적용 */}
+
+      {/* <RandomNumber value={10} isPositive isNegative ></RandomNumber> 
+      error 발생
+      */}
     </div>
   );
 }
