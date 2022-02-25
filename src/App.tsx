@@ -1,10 +1,12 @@
 import './App.css';
-import { Container } from './components/Container';
+import { LoggedIn } from './state/LoggedIn';
+import { User } from './state/User';
 
 function App() {
   return (
     <div className="App">
-      <Container styles={{ border: '1px solid black', padding: '1rem' }}></Container>
+      <LoggedIn></LoggedIn>
+      <User></User>
     </div>
   );
 }
