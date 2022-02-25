@@ -1,22 +1,12 @@
 import './App.css';
-import { Status } from './components/Status';
-import { Heading } from './components/Heading';
-import { Oscar } from './components/Oscar';
-import { Greet } from './components/Greet';
+import { Button } from './components/Button';
+import { Input } from './components/Input';
 
 function App() {
   return (
     <div className="App">
-      <Status status="error"></Status>
-      {/* <Status status="add"></Status> , error 발생 */}
-
-      <Heading>This is Children</Heading>
-
-      <Oscar>
-        <Heading>Heading To Oscar</Heading>
-      </Oscar>
-
-      <Greet name="greet name" isLoggedIn={true}></Greet>
+      <Button handleClick={(event, id) => console.log('buttonClicked', event, id)}></Button>
+      <Input value="" handleChange={(event) => console.log(event)}></Input>
     </div>
   );
 }
