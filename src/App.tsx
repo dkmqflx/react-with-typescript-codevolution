@@ -1,11 +1,19 @@
 import './App.css';
-import { Private } from './components/auth/Private';
-import { Profile } from './components/auth/Profile';
+import List from './components/generics/List';
 
 function App() {
   return (
     <div className="App">
-      <Private isLoggedIn={true} component={Profile}></Private>
+      <List items={['1', '2', '3']} onClick={(item) => console.log(item)}></List>
+      <List items={[1, 2, 3]} onClick={(item) => console.log(item)}></List>
+      <List
+        items={[
+          { id: 1, first: '1' },
+          { id: 2, first: '2' },
+          { id: 3, first: '3' },
+        ]}
+        onClick={(item) => console.log(item)}
+      ></List>
     </div>
   );
 }
