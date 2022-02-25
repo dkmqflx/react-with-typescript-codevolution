@@ -3,7 +3,8 @@ type InputProps = {
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export function Input(props: InputProps) {
+// props를 destructuring할 수 있다
+export function Input({ value, handleChange }: InputProps) {
   /*
   
   컴포넌트 내에서도 아래처럼 change handler를 등록할 수 있다 
@@ -14,5 +15,5 @@ export function Input(props: InputProps) {
 
   */
 
-  return <input type="text" value={props.value} onChange={props.handleChange} />;
+  return <input type="text" value={value} onChange={handleChange} />;
 }
